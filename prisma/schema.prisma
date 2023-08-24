@@ -1,0 +1,46 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+model meal {
+  id               Int           @id @default(autoincrement()) @db.UnsignedInt
+  title            String        @db.VarChar(255)
+  description      String        @db.Text
+  location         String        @db.VarChar(255)
+  when             DateTime      @db.DateTime(0)
+  max_reservations Int
+  price            Decimal       @db.Decimal(10, 0)
+  created_date     DateTime      @db.Date
+  reservation      reservation[]
+  review           review[]
+}
+
+model reservation {
+  id               Int      @id @default(autoincrement()) @db.UnsignedInt
+  number_of_guests Int
+  meal_id          Int      @db.UnsignedInt
+  created_date     DateTime @db.Date
+  contact_number   String   @db.VarChar(255)
+  contact_name     String   @db.VarChar(255)
+  contact_email    String   @db.VarChar(255)
+  meal             meal     @relation(fields: [meal_id], references: [id], onDelete: Cascade, map: "fk_meal_reservation")
+
+  @@index([meal_id], map: "fk_meal_reservation")
+}
+
+model review {
+  id           Int      @id @default(autoincrement()) @db.UnsignedInt
+  title        String   @db.VarChar(255)
+  description  String   @db.Text
+  meal_id      Int      @db.UnsignedInt
+  stars        Int
+  created_date DateTime @db.Date
+  meal         meal     @relation(fields: [meal_id], references: [id], onDelete: Cascade, map: "fk_meal_review")
+
+  @@index([meal_id], map: "fk_meal_review")
+}
