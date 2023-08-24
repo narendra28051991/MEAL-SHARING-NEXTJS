@@ -1,0 +1,26 @@
+.banner h2 {
+    margin: 0;
+    color: #e5e5e5;
+    background: #4c4c4c;
+    display: inline-block;
+    padding: 20px;
+    position: relative;
+    top: -60px;
+    left: -10px;
+    text-transform: uppercase;
+    transform: rotateZ(-1deg);
+    box-shadow: 1px 3px 5px rgba(0,0,0,0.1);
+}
+.info p {
+    margin: 0;
+}
+.btn {
+    margin-top: 20px;
+    color: #e5e5e5;
+    background: #4c4c4c;
+    padding: 6px;
+    border: 0;
+    border-radius: 4px;
+    font-size: 0.8em;
+    cursor: pointer
+}

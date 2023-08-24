@@ -1,0 +1,26 @@
+.edit .form {
+    max-width: 400px;
+    margin: 0 auto;
+}
+.edit input,
+.edit textarea {
+    display: block;
+    width: 100%;
+    margin: 10px 0;
+    padding: 8px;
+}
+.edit label {
+    display: block;
+    margin-top: 24px;
+}
+.edit button {
+    display: block;
+    margin-top: 20px;
+    background: #f01b29;
+    color: white;
+    padding: 6px;
+    border: 0;
+    border-radius: 4px;
+    font-size: 0.8em;
+    cursor: pointer;
+}

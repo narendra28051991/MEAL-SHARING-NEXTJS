@@ -1,0 +1,47 @@
+.banner h2 {
+    text-transform: uppercase;
+    margin: 0;
+    background: #fff;
+    display: inline-block;
+    padding: 20px;
+    position: relative;
+    top: -60px;
+    left: -10px;
+    transform: rotateZ(-1deg);
+    box-shadow: 1px 3px 5px rgba(0,0,0,0.1);
+}
+.feature {
+    margin: 20px;
+    background: #b2b2b2;
+    display: inline-block;
+    padding: 20px;
+    position: relative;
+    top: 0px;
+    left: -10px;
+    transform: rotateZ(-1deg);
+    box-shadow: 1px 3px 5px rgba(0,0,0,0.1);
+}
+.feature a {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #000000;
+}
+.info p {
+    margin: 0;
+}
+.buttons {
+    margin: 50px 0;
+}
+.edit, .delete, .back {
+    border-radius: 50%;
+    padding: 8px;
+    border: none;
+    background: none;
+}
+.edit, .delete {
+    margin-right: 50px;
+}
+.edit:hover, .delete:hover, .back:hover {
+    cursor: pointer;
+    box-shadow: 1px 3px 5px rgba(0,0,0,0.2);
+}
